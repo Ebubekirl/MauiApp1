@@ -30,7 +30,6 @@ namespace MauiApp1
         {
             try
             {
-                // Serialize tasks to JSON
                 string jsonTasks = JsonSerializer.Serialize(tasks);
                 string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "tasks.json");
                 await File.WriteAllTextAsync(filePath, jsonTasks);
